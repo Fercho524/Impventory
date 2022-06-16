@@ -1,7 +1,13 @@
-# ProyectoADS 4BM1
+# Impventory
+El inventario de tu negocio totalmente automatizado, en el que puedes monitorearlo todo.
 
-Sistema de inventario de papelería online.
-
+## Desarrollado por
 - Castro Mendieta Fernando
 - Rojas Mendoza Jeremy
 - Velazquez de la Cruz Daniela
+
+![](docs/20220616111749.jpg)
+
+![](docs/20220616111856.jpg)
+
+![](docs/20220616111922.jpg)
