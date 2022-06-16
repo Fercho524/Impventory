@@ -1,0 +1,63 @@
+<div class="container p-4">
+    <div class="row">
+        {{!-- Para cuando haya productos que mostrar, va a mostrar estas tarjetas en el front --}}
+
+        {{#each car}}
+        <div class="col-12 mt-2">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{nombre}}
+                    </h3>
+
+                    <table class="table">
+                        <tr>
+                        <tr>
+                            <td>
+                                <p class="btn">
+                                    <b>Cantidad</b>
+                                    {{cantidad}}
+                                </p>
+                            </td>
+                            <td>
+                                <p class="btn">
+                                    <b>Precio</b>
+                                    {{precio}}
+                                </p>
+                            </td>
+                            <td>
+                                <p class="btn">
+                                    <b>Precio Total</b>
+                                    {{ multiply precio cantidad}}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/products/carDelete/{{id}}" class="btn btn-danger mt-3">Eliminar del
+                                    Carrito</a>
+                            </td>
+                        </tr>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {{else}}
+
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>El carrito está vacio</p>
+                <a href="/products">Añade un producto</a>
+            </div>
+        </div>
+
+
+        {{/each}}
+
+        <div class="container p-4">
+            <center><a href="/products/genorder" class="btn btn-primary"> Confirmar</a></center>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container p-4">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr class="bg-dark">
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            {{#each ventas}}
+
+            <tr>
+                <td class="table-light">
+                    {{nombre}}
+                </td>
+
+                <td class="table-light">
+                    {{precio}}
+                </td>
+
+                <td class="table-light">
+                    {{cantidad}}
+                </td>
+            </tr>
+
+            {{/each}}
+        </table>
+    </div>
+</div>

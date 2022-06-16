@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 * {
@@ -20,7 +21,17 @@ body {
     text-align: center;
     color: #fff;
     font-size: 50px;
+    font-family:  'Lobster', cursive;
 }
+
+.navbar-brand{
+    font-family:  'Lobster', cursive;
+}
+
+.navbar-dark{
+    background: rgb(12, 11, 15);
+}
+
 
 .area {
     background: #4e54c8;

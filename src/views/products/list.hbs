@@ -8,14 +8,26 @@
                         <h3 class="card-title text-uppercase">
                             {{nombre}}
                         </h3>
-                        <p class="m-2">{{descripcion}}</p>
-                        <p class="m-2">{{precioCompra}}</p>
-                        <p class="m-2">{{precioVenta}}</p>
-                        <p class="m-2">{{existencia}}</p>
+                        <p class="m-2">
+                            {{descripcion}}
+                        </p>
+                        <p class="m-2">
+                            <b>Precio de Compra</b>
+                            {{precioCompra}}
+                        </p>
+                        <p class="m-2">
+                            <b>Precio de Venta</b>
+                            {{precioVenta}}
+                        </p>
+                        <p class="m-2">
+                            <b>Unidades Disponibles</b>
+                            {{existencia}}
+                        </p>
                         <p>{{timeago creado}}</p>
                         <a href="/products/delete/{{id}}" class="btn btn-danger">Borrar producto</a>
                         <a href="/products/edit/{{id}}" class="btn btn-secondary">Editar</a>
                         <a href="/products/history/{{id}}" class="btn btn-success mt-3">Ver Historial de Precios</a>
+                        <a href="/products/addCar/{{id}}" class="btn btn-primary mt-3">Añadir al Carrito</a>
                     </div>
                 </div>
             </div>
