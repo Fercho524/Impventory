@@ -1,0 +1,29 @@
+<div class="container p-4">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr class="table-secondary">
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio de compra nuevo</th>
+                    <th scope="col">Precio de venta actual</th>
+                    <th scope="col">Fecha de Actualización</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {{#each prices}}
+                <tr class="table-light">
+                    <td>{{idProducto}}</td>
+                    <td>{{precioCompraNuevo}}</td>
+                    <td>{{precioVentaNuevo}}</td>
+                    <td>{{fecha}}</td>
+                </tr>
+                {{else}}
+                <tr></tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</div>

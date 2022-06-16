@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+{{!-- Para cuando haya productos que mostrar, va a mostrar estas tarjetas en el front --}}
+        {{#each products}}
+            <div class="col-md-4 mt-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title text-uppercase">
+                            {{nombre}}
+                        </h3>
+                        <p class="m-2">{{descripcion}}</p>
+                        <p class="m-2">{{precioCompra}}</p>
+                        <p class="m-2">{{precioVenta}}</p>
+                        <p class="m-2">{{existencia}}</p>
+                        <p>{{timeago creado}}</p>
+                        <a href="/products/delete/{{id}}" class="btn btn-danger">Borrar producto</a>
+                        <a href="/products/edit/{{id}}" class="btn btn-secondary">Editar</a>
+                        <a href="/products/history/{{id}}" class="btn btn-success mt-3">Ver Historial de Precios</a>
+                    </div>
+                </div>
+            </div>
+{{!-- Para cuando el usuario haya eliminado todos sus productos, que le aparezca un mensaje indicándole que ponga más --}}            
+        {{else}} 
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay productos guardados aún.</p>
+                    <a href="/products/add">Crea uno!</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
