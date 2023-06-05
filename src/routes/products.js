@@ -29,7 +29,9 @@ router.post('/add', async (req, res) => {
         precioVenta
     };
 
-    await pool.query('INSERT INTO Productos set ?', [newProduct]);
+    console.log(nombre, descripcion, existencia, precioCompra, precioVenta)
+
+    await pool.query(`insert into Productos (nombre,precioCompra,precioVenta,existencia) values ("${nombre}", ${precioCompra}, ${precioVenta}, ${existencia});`);
 
     const producto = await pool.query("SELECT * FROM Productos WHERE nombre=?", [nombre]);
     const newId = producto[0].id;
@@ -78,6 +80,7 @@ router.post('/edit/:id', async (req, res) => {
     const productoViejo = await pool.query("select * from Productos where id=?", [id]);
 
     const { nombre, descripcion, precioVenta, precioCompra, existencia } = req.body;
+    
     const newProduct = {
         nombre, descripcion, precioVenta, precioCompra, existencia
     };
@@ -175,7 +178,6 @@ router.get("/genorder",async(req,res)=>{
     }
 
     const ventas=await pool.query("SELECT * FROM Ventas");
-    
     
     await pool.query("SET FOREIGN_KEY_CHECKS=0");
     await pool.query("DELETE FROM Carrito where cantidad>0");

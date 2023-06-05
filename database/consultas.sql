@@ -10,15 +10,7 @@ where
     id = 1;
 
 /*Crear un nuevo producto*/
-insert into
-    Productos (
-        nombre,
-        precioCompra,
-        precioVenta,
-        existencia
-    )
-values
-    ("Colores Mapita", 40, 50, 20);
+insert into Productos (nombre,precioCompra,precioVenta,existencia) values ("Colores Mapita", 40, 50, 20);
 
 /*Actualizar Producto*/
 update Productos set nombre = "Colores Fabber Casttle" where  id = 1;
